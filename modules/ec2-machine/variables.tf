@@ -15,6 +15,16 @@ variable "subnet_id" {
 
 variable "ami_id" {
   type        = string
-  description = "The subnet ID for the host."
+  description = "AMI ID for the host."
 }
 
+variable "vpc_id" {
+  type        = string
+  description = "VPC ID for the host."
+}
+
+variable "use_elastic_ip" {
+  type        = bool
+  default     = false
+  description = "Whether to associate an Elastic IP with the host."
+}
